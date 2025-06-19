@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #4A90E2; /* A fresh, modern blue */
+    --primary-hover-color: #357ABD;
+    --secondary-color: #f0f2f5; /* Light grey for backgrounds */
+    --text-color: #333;
+    --text-light-color: #666;
+    --border-color: #dbe1e8;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --white-color: #ffffff;
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 8px rgba(0,0,0,0.07);
+    --border-radius-md: 8px;
+    --border-radius-sm: 5px;
+    --font-family-main: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-family-main);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.control-panel {
+    background-color: var(--white-color);
+    padding: 2rem;
+    height: 100vh;
+    border-right: 1px solid var(--border-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: #2a2f45;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+h5.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light-color);
+}
+
+.form-control, .form-select {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    outline: none;
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.btn {
+    border: none;
+    border-radius: var(--border-radius-sm);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn i {
+    font-size: 1.1em;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: var(--white-color);
+}
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    color: var(--white-color);
+}
+
+.btn-success:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: var(--white-color);
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-light {
+    background-color: #f8f9fa;
+    color: #212529;
+    border: 1px solid var(--border-color);
+}
+
+.btn-light:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.data-section {
+    background-color: var(--white-color);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+    margin: 1.5rem;
+    height: calc(100vh - 3rem);
+}
+
+.data-header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-responsive {
+    max-height: calc(100vh - 120px); /* Adjust based on your layout */
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #f9fafb;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-light-color);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: var(--secondary-color);
+}
+
+.truncatable {
+    max-width: 250px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
+.progress {
+    height: 10px;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+/* Accordion Custom Styles */
+.accordion-item {
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm) !important;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+.accordion-item:last-child {
+    margin-bottom: 0;
+}
+
+.accordion-header {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.accordion-button {
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: #f9fafb;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: #f0f8ff;
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    border-color: var(--primary-color);
+}
+
+.accordion-body {
+    padding: 1.5rem;
+}
+
+/* Email Popup Modal Styles */
+#emailPopup .modal-content {
+    border-radius: var(--border-radius-md);
+    border: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+#emailPopup .modal-header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-top-left-radius: var(--border-radius-md);
+    border-top-right-radius: var(--border-radius-md);
+    border-bottom: none;
+    padding: 1.5rem;
+}
+
+#emailPopup .modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#emailPopup .modal-body {
+    padding: 2rem;
+    color: var(--text-light-color);
+} 
